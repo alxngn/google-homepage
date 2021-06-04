@@ -72,6 +72,10 @@ button {
     align-items: center;
 }
 
+.search-area {
+    padding: 20px;
+}
+
 .search-field {
     width: 584px;
     height: 46px;
