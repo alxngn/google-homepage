@@ -1,29 +1,10 @@
-ul {
-    list-style-type: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li {
-    display: inline;
-}
-
-li a {
-    display: inline;
-    /* color: white;*/
-    text-align: center;
-    padding: 14px 16px;
+a {
     text-decoration: none;
 }
 
-.left-items {
-    float: left;
-}
-
-.right-items {
-    float: right;
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 main {
@@ -32,10 +13,51 @@ main {
     align-items: center;
 }
 
-.top-menu {
+body,
+input,
+button {
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    color: #222;
+}
+
+#nav-top {
+    color: #222;
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.top-menu {
     display: flex;
-    height: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-items {
+    padding: 0 20px;
+    color: #222 !important;
+}
+
+.other-apps {
+    color: #70757a;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+}
+
+.other-apps:hover {
+    background-color: rgba(60,64,67,0.1);;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.user-size {
+    font-size: 26px;
 }
 
 .input-field input {
@@ -60,6 +82,12 @@ main {
     border-radius: 23px
 }
 
+.search-field:hover,
+.search-field:focus,
+.search-field:active {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
 .input-field {
     display: flex;
     align-items: center;
@@ -72,7 +100,8 @@ main {
     outline: 0;
 }
 
-.magnifier, .voice {
+.magnifier,
+.voice {
     font-size: 16px;
     margin: 14px;
 }
@@ -84,14 +113,15 @@ main {
 .buttons {
     display: flex;
     justify-content: center;
+        padding-top: 18px;
 }
 
-.lucky, .google-search {
+.lucky,
+.google-search {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
-        border-radius: 4px;
+    border-radius: 4px;
     color: #3c4043;
-    font-family: arial,sans-serif;
     font-size: 14px;
     margin: 11px 4px;
     padding: 0 16px;
@@ -104,7 +134,7 @@ main {
 }
 
 .offered-language {
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
     font-size: small;
     line-height: 28px;
 }
@@ -117,28 +147,38 @@ main {
     align-items: center;
 }
 
-#content-wrap {
-    padding-bottom: 2.5rem;
-    /* Footer height */
-}
-
 #footer {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #f2f2f2;
     /* Footer height */
 }
 
-.footer-top, .footer-bottom {
-    padding: 15px 30px;
-
-}
-
 .footer-top {
+    padding: 15px 30px;
     border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .54);
 }
+
 .footer-bottom {
-    position: relative;
-    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottom-items {
+    padding: 0 20px;
+}
+
+.side-items {
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+a.side-items {
+    color: #70757a;
 }
